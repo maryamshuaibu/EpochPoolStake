@@ -1,0 +1,29 @@
+[project]
+name = 'EpochPoolStake'
+description = ''
+authors = []
+telemetry = true
+cache_dir = '.\.cache'
+requirements = []
+[contracts.EpochGovernance]
+path = 'contracts/EpochGovernance.clar'
+clarity_version = 3
+epoch = 3.1
+
+[contracts.EpochPoolStake]
+path = 'contracts/EpochPoolStake.clar'
+clarity_version = 3
+epoch = 3.1
+
+[contracts.EpochRewardsDistributor]
+path = 'contracts/EpochRewardsDistributor.clar'
+clarity_version = 3
+epoch = 3.1
+[repl.analysis]
+passes = ['check_checker']
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
